@@ -5,7 +5,7 @@ class FreeShippingCalculatorTest
     public function ShouldApply_WhenValueIsAbouveMinimunTest()
     {
         $freight = new FreeShippingCalculator();
-        $value = 160;
+        $value = 142;
         $totalWithFreight = $freight->apply($value);
 
         $expectedValue = true;
@@ -15,7 +15,7 @@ class FreeShippingCalculatorTest
     public function assertEquals($expectedValue, $actualFreight)
     {
         if($expectedValue !== $actualFreight) {
-            $message = 'Expected: ' . $expectedValue . ' but got: ' . $actualFreight . '--------------------';
+            $message = 'Expected: ' . $expectedValue . ' but got: ' . $actualFreight . 'FALSE';
             throw new Exception($message);
         }
 
